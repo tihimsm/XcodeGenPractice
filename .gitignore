@@ -132,3 +132,6 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/swift,xcode,fastlane,carthage,cocoapods
+
+## XcodeGen
+XcodeGenPractice.xcodeproj
