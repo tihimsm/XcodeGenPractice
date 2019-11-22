@@ -1,0 +1,31 @@
+name: XcodeGenPractice
+fileGroups:
+  - configs
+configFiles:
+  Debug: configs/Debug.xcconfig
+  Release: configs/Release.xcconfig
+targets:
+  XcodeGenPractice:
+    type: application
+    platform: iOS
+    sources: XcodeGenPractice
+    configFiles:
+      Debug: configs/XcodeGenPractice-Debug.xcconfig
+      Release: configs/XcodeGenPractice-Release.xcconfig
+    settings:
+      CURRENT_PROJECT_VERSION: 1
+    scheme:
+      testTargets:
+        - XcodeGenPracticeTests
+    dependencies:
+      - carthage: Realm
+      - carthage: RealmSwift
+  XcodeGenPracticeTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: XcodeGenPracticeTests
+    configFiles:
+      Debug: configs/XcodeGenPracticeTests-Debug.xcconfig
+      Release: configs/XcodeGenPracticeTests-Release.xcconfig
+    dependencies:
+      - target: XcodeGenPractice
